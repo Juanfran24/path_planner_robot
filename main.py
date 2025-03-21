@@ -189,9 +189,12 @@ if __name__ == "__main__":
     path = a_star_search(G, start, goal)
     end_time = time.time()
 
-    print(f"Tiempo de ejecución: {end_time - start_time:.5f} segundos")
+    print(f"\n\nTiempo de ejecución: {end_time - start_time:.5f} segundos")
 
     # Ruta encontrada
-    print("Ruta encontrada:", path)
+    print("\n\nRuta encontrada:", path)
+
+    # Costo de la ruta encontrada
+    print("\n\nCosto de la ruta:", len(path) - 1)
 
     draw_grid_graph(G, rows, cols, obstacles, path, start, goal)
